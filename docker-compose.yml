@@ -4,7 +4,7 @@ services:
   drupal:
     build: ./php-apache
     ports:
-      - 8080:80
+      - 8082:80
     volumes:
       - ./app:/var/www/html:rw,delegated
     restart: always
@@ -21,8 +21,8 @@ services:
    restart: always
    command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
    ports:
-    - "3306:3306"
+    - "3307:3306"
  
 volumes:
-  html:
+  app:
   db-data:
